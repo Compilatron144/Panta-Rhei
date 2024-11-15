@@ -88,6 +88,12 @@
       - id: ClothingShoesTourist
       - id: ClothingUniformJumpsuitLoungewear
       - id: ClothingHeadHatCowboyRed
+      # Floofstation - spray paint
+      - !type:NestedSelector
+        weight: 5
+        table: !type:NestedSelector
+        tableId: SprayPaintTable
+      # Floofstation section end
     # Uncommon Group
     - !type:GroupSelector
       weight: 23

@@ -191,6 +191,7 @@
     - CrateEngineeringParticleAccelerator
     - CrateRCD
     - CrateEngineeringGear
+    - CrateFunSprayPaints # Floofstation
     rareChance: 0.2
     prototypes:
     - CrateEngineering
