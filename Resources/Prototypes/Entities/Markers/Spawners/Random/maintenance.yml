@@ -90,7 +90,9 @@
       - id: ClothingHeadHatCowboyRed
       # Floofstation - spray paint
       - !type:NestedSelector
-        weight: 5
+        weight: 3
+        rolls: !type:RangeNumberSelector
+          range: 1, 3
         table: !type:NestedSelector
         tableId: SprayPaintTable
       # Floofstation section end
