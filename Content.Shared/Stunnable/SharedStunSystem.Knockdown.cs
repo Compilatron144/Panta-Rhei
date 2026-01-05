@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Timers;
 using Content.Shared.Alert;
 using Content.Shared.Buckle.Components;
 using Content.Shared.CCVar;
@@ -377,7 +378,8 @@ public abstract partial class SharedStunSystem
         if (TryComp<ClimbableComponent>(collider.Value, out var colliderClimb)
             && _climb.CanVault(colliderClimb, entity, collider.Value, out _))
         {
-            _climb.Climb(entity, entity, collider.Value, silent: true);
+            // Try to climb on the next tick. We have to finish standing up first.
+            Robust.Shared.Timing.Timer.Spawn(0, () => _climb.ForciblySetClimbing(entity, collider.Value));
             return false;
         }
 
