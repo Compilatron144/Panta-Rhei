@@ -1,20 +1,14 @@
-using System.Linq;
-using Content.Client.Guidebook;
-using Content.Server.Verbs;
-using Content.Shared.InteractionVerbs;
-using Content.Shared.Verbs;
+using Content.Shared._Floof.InteractionVerbs;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 
-namespace Content.IntegrationTests.Tests.InteractionVerbs;
+namespace Content.IntegrationTests.Tests._Floof.InteractionVerbs;
 
 [TestFixture]
 [FixtureLifeCycle(LifeCycle.SingleInstance)]
 [TestOf(typeof(InteractionVerbPrototype))]
 public sealed class InteractionPrototypesTest
 {
-    public const string TestMobProto = "MobHuman";
-
     [Test]
     public async Task ValidatePrototypeContents()
     {
