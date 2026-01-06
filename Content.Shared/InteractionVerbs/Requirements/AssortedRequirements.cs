@@ -69,3 +69,4 @@ public sealed partial class SelfTargetRequirement : InvertableInteractionRequire
         return (args.Target == args.User) ^ Inverted;
     }
 }
+

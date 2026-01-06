@@ -11,8 +11,8 @@
     - !type:EntityWhitelistRequirement
       whitelist:
         components: [MobState] # Don't go around kissing inanimate objects.
-    #- !type:SlotObstructionRequirement
-    #  slot: MASK
+    - !type:SlotObstructionRequirement
+      slot: MASK
   action:
     !type:MoodAction
     effect: BeingKissed
@@ -35,8 +35,8 @@
       whitelist:
         components: [MobState, Anomaly, Food]
         tags: [Window] # yes.
-    #- !type:SlotObstructionRequirement
-    #  slot: MASK
+    - !type:SlotObstructionRequirement
+      slot: MASK
   action:
     !type:MoodAction
     effect: BeingLicked
