@@ -67,11 +67,9 @@ flavor-complex-thecutecaptain = like moonlight
 flavor-complex-axelsale = like a long day on the frontier
 flavor-complex-jenntonic = sweet with a hidden bite
 flavor-complex-hallelujah = a moment of peace
-flavor-complex-blue-pumpkin = like a mouthful of pool water
-flavor-base-strange = strange
 flavor-complex-walnut = like walnuts
 flavor-complex-despair = despair
-flavor-complex-eggnog = eggnog
 flavor-complex-syndicate-eggnog = like eggnog, and war profiteering
 flavor-complex-ginandpussy = like wet pussy, with extra gin
 flavor-complex-pussytonic = like pussy, but with tonic
+
