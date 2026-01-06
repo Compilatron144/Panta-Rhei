@@ -1,3 +1,4 @@
+using Content.Shared._Floof.InteractionVerbs.Events;
 using Content.Shared.Emoting;
 using Content.Shared.Hands;
 using Content.Shared.Interaction.Events;
