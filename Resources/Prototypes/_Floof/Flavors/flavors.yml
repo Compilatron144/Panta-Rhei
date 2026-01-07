@@ -309,11 +309,6 @@
   description: flavor-complex-thewaterslide
 
 - type: flavor
-  id: whiskeysour
-  flavorType: Complex
-  description: flavor-complex-whiskeysour
-
-- type: flavor
   id: whitechocolatechip
   flavorType: Complex
   description: flavor-complex-whitechocolatechip
@@ -372,4 +367,3 @@
   id: pussytonic
   flavorType: Complex
   description: flavor-complex-pussytonic
-
