@@ -172,9 +172,6 @@ reagent-desc-watermelonginjizz = Perfect for a luncheon on a warm sunny afternoo
 reagent-name-thewaterslide = the waterslide
 reagent-desc-thewaterslide = Charcoal not included for you, o naughty one.
 
-reagent-name-whiskeysour = whiskey sour
-reagent-desc-whiskeysour = Shelter from the Noöspheric Storm.
-
 reagent-name-yeolhandy = ye ol handy
 reagent-desc-yeolhandy = The loner's choice, cold as their bed.
 
@@ -198,4 +195,5 @@ reagent-desc-gin-and-pussy = A Sapphic twist on the classic Gin and Tonic, featu
 
 reagent-name-pussytonic = Pussy Tonic
 reagent-desc-pussytonic = Natural Lubrican with some tonic, for pussy lovers.
+
 
