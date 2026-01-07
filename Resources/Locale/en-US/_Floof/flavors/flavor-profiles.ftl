@@ -60,7 +60,6 @@ flavor-complex-voltage = like drinking an alcoholic battery
 flavor-complex-wakeupjuice = chunky, thick, and utterly disgusting
 flavor-complex-watermelonginjizz = bubbly and fruity
 flavor-complex-thewaterslide = like unsanitary depravity
-flavor-complex-whiskeysour = sour and like molasses
 flavor-complex-whitechocolatechip = like white chocolate chips
 flavor-complex-yeolhandy = like oranges and solitude
 flavor-complex-thecutecaptain = like moonlight
@@ -72,4 +71,5 @@ flavor-complex-despair = despair
 flavor-complex-syndicate-eggnog = like eggnog, and war profiteering
 flavor-complex-ginandpussy = like wet pussy, with extra gin
 flavor-complex-pussytonic = like pussy, but with tonic
+
 
