@@ -137,20 +137,6 @@
     Cream: 15
 
 - type: reaction
-  id: CreamOfCoconut
-  requiredMixerCategories:
-  - Shake
-  reactants:
-    CoconutWater:
-      amount: 2
-    Cream:
-      amount: 3
-    Sugar:
-      amount: 1
-  products:
-    CreamOfCoconut: 6
-
-- type: reaction
   id: CremeDeCacao
   requiredMixerCategories:
   - Stir
@@ -989,4 +975,5 @@
       amount: 1
   products:
     PussyTonic: 2
+
 
