@@ -856,20 +856,6 @@
     TheWaterslide: 3
 
 - type: reaction
-  id: WhiskeySour
-  requiredMixerCategories:
-  - Shake
-  reactants:
-    Egg:
-      amount: 3
-    JuiceLemon:
-      amount: 5
-    Whiskey:
-      amount: 7
-  products:
-    WhiskeySour: 15
-
-- type: reaction
   id: YeOlHandy
   requiredMixerCategories:
   - Shake
@@ -975,5 +961,6 @@
       amount: 1
   products:
     PussyTonic: 2
+
 
 
