@@ -1417,29 +1417,6 @@
         amount: 0.15
 
 - type: reagent
-  id: WhiskeySour
-  name: reagent-name-whiskeysour
-  parent: BaseAlcohol
-  desc: reagent-desc-whiskeysour
-  physicalDesc: reagent-physical-desc-foamy
-  flavor: whiskeysour
-  color: "#fefebe"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/whiskeysour.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 3
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.06
-
-- type: reagent
   id: YeOlHandy
   name: reagent-name-yeolhandy
   parent: BaseAlcohol
@@ -1638,4 +1615,5 @@
       effects:
       - !type:SatiateThirst
         factor: 2
+
 
