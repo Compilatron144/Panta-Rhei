@@ -344,16 +344,6 @@
   description: flavor-complex-hallelujah
 
 - type: flavor
-  id: bluepumpkin
-  flavorType: Complex
-  description: flavor-complex-blue-pumpkin
-
-- type: flavor
-  id: strange
-  flavorType: Base
-  description: flavor-base-strange
-
-- type: flavor
   id: walnut
   flavorType: Complex
   description: flavor-complex-walnut
@@ -362,11 +352,6 @@
   id: despair
   flavorType: Complex
   description: flavor-complex-despair
-
-- type: flavor
-  id: eggnog
-  flavorType: Complex
-  description: flavor-complex-eggnog
 
 - type: flavor
   id: syndicate-eggnog
@@ -387,3 +372,4 @@
   id: pussytonic
   flavorType: Complex
   description: flavor-complex-pussytonic
+
