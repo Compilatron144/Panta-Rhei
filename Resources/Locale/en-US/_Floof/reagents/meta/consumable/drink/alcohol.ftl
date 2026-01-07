@@ -190,9 +190,6 @@ reagent-desc-jenn-tonic = Light golden and bubbly, what could go wrong?
 reagent-name-hallelujah = Hallelujah
 reagent-desc-hallelujah = Exactly what you need.
 
-reagent-name-eggnog = Eggnog
-reagent-desc-eggnog = creamy, pale yellow and topped with a sprinkle of cinnamon.
-
 reagent-name-syndicate-eggnog = Syndicate Eggnog
 reagent-desc-syndicate-eggnog = creamy, pale yellow and topped with a sprinkle of cinnamon and strongly alcoholic.
 
@@ -201,3 +198,4 @@ reagent-desc-gin-and-pussy = A Sapphic twist on the classic Gin and Tonic, featu
 
 reagent-name-pussytonic = Pussy Tonic
 reagent-desc-pussytonic = Natural Lubrican with some tonic, for pussy lovers.
+
