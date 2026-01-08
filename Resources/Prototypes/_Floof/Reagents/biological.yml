@@ -71,11 +71,13 @@
   name: reagent-name-nat-lube
   group: Biological
   desc: reagent-desc-nat-lube
-  slippery: true
   physicalDesc: reagent-physical-desc-shiny
-  flavor: funny
+  flavor: funky
   color: "#d6d6d6"
   recognizable: true
+  slipData:
+    requiredSlipSpeed: 1
+    superSlippery: true
   metabolisms:
     Drink:
       effects:
@@ -87,7 +89,6 @@
       volume: 4
   tileReactions:
   - !type:SpillTileReaction
-    paralyzeTime: 0.5
-    launchForwardsMultiplier: 1.2
-    requiredSlipSpeed: 1
+  friction: 0.05
+
 
