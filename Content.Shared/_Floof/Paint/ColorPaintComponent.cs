@@ -7,10 +7,12 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Floof.Paint;
 
-/// Entity when used on another entity will paint target entity
+/// <summary>
+/// Entity that, when used on another entity, will paint it
+/// </summary>
+/// <remarks>Floofstation note: this used to be called Paint, but was renamed to avoid future conflicts</remarks>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedPaintSystem))]
-public sealed partial class PaintComponent : Component
+public sealed partial class ColorPaintComponent : Component
 {
     /// Noise made when paint gets applied
     [DataField]

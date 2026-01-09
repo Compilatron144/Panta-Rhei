@@ -60,7 +60,7 @@
     solution: soap
   - type: DeleteOnSolutionEmpty
     solution: soap
-  - type: PaintRemover
+  - type: ColorPaintRemover # Floofstation
   - type: FlavorProfile
     flavors:
       - clean

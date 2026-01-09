@@ -3,9 +3,12 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Floof.Paint;
 
-/// Component applied to target entity when painted
+/// <summary>
+/// Applied to an entity that has been painted using a spray paint (NOT a spray painter!)
+/// </summary>
+/// <remarks>Floofstation: renamed to ColorPainted due to a conflict with SprayPainter</remarks>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class PaintedComponent : Component
+public sealed partial class ColorPaintedComponent : Component
 {
     [DataField, AutoNetworkedField]
     public Color Color = Color.FromHex("#2cdbd5");
