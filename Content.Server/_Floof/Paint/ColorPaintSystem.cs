@@ -63,7 +63,7 @@ public sealed class ColorPaintSystem : EntitySystem
                 PrepPaint(entity, target, user);
             },
             Text = Loc.GetString("paint-verb"),
-            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/paint.svg.192dpi.png"))
+            Icon = new SpriteSpecifier.Texture(new("/Textures/_Floof/Interface/VerbIcons/paint.svg.192dpi.png"))
         };
         args.Verbs.Add(verb);
     }
