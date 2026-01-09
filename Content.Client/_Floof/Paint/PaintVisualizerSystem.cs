@@ -1,12 +1,12 @@
-using Robust.Client.GameObjects;
-using static Robust.Client.GameObjects.SpriteComponent;
+using Content.Shared._Floof.Paint;
 using Content.Shared.Clothing;
 using Content.Shared.Hands;
-using Content.Shared.Paint;
+using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Prototypes;
+using static Robust.Client.GameObjects.SpriteComponent;
 
-namespace Content.Client.Paint;
+namespace Content.Client._Floof.Paint;
 
 public sealed class PaintedVisualizerSystem : VisualizerSystem<PaintedComponent>
 {
@@ -55,11 +55,11 @@ public sealed class PaintedVisualizerSystem : VisualizerSystem<PaintedComponent>
 
         foreach (var spriteLayer in sprite.AllLayers)
         {
-            if (spriteLayer is not Layer layer
-                || layer.Shader != _protoMan.Index<ShaderPrototype>(component.ShaderName).Instance())
+            if (spriteLayer is not Layer layer)
                 continue;
 
-            layer.Shader = null;
+            if (layer.ShaderPrototype == component.ShaderName)
+                layer.Shader = null;
             if (layer.Color == component.Color)
                 layer.Color = component.BeforeColor;
         }
@@ -67,8 +67,10 @@ public sealed class PaintedVisualizerSystem : VisualizerSystem<PaintedComponent>
 
     private void OnHeldVisualsUpdated(EntityUid uid, PaintedComponent component, HeldVisualsUpdatedEvent args) =>
         UpdateVisuals(component, args);
+
     private void OnEquipmentVisualsUpdated(EntityUid uid, PaintedComponent component, EquipmentVisualsUpdatedEvent args) =>
         UpdateVisuals(component, args);
+
     private void UpdateVisuals(PaintedComponent component, EntityEventArgs args)
     {
         var layers = new HashSet<string>();
@@ -94,7 +96,8 @@ public sealed class PaintedVisualizerSystem : VisualizerSystem<PaintedComponent>
             if (!sprite.LayerMapTryGet(revealed, out var layer))
                 continue;
 
-            sprite.LayerSetShader(layer, component.ShaderName);
+            if (!string.IsNullOrEmpty(component.ShaderName))
+                sprite.LayerSetShader(layer, component.ShaderName);
             sprite.LayerSetColor(layer, component.Color);
         }
     }

@@ -1,7 +1,7 @@
-using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
+using Robust.Shared.GameStates;
 
-namespace Content.Shared.Paint;
+namespace Content.Shared._Floof.Paint;
 
 ///  Removes paint from an entity that was painted with spray paint
 [RegisterComponent, NetworkedComponent]

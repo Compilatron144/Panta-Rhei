@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Paint;
+namespace Content.Shared._Floof.Paint;
 
 /// Component applied to target entity when painted
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]

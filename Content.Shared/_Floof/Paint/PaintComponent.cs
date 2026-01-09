@@ -1,11 +1,11 @@
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
-using Robust.Shared.Audio;
 using Content.Shared.Whitelist;
-using Robust.Shared.Prototypes;
+using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
-namespace Content.Shared.Paint;
+namespace Content.Shared._Floof.Paint;
 
 /// Entity when used on another entity will paint target entity
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]

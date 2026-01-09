@@ -1,4 +1,4 @@
-namespace Content.Shared.Paint;
+namespace Content.Shared._Floof.Paint;
 
 public abstract class SharedPaintSystem : EntitySystem
 {

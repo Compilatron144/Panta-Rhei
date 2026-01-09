@@ -1,12 +1,10 @@
-using Content.Shared.Popups;
-using Content.Shared.Interaction;
 using Content.Shared.DoAfter;
+using Content.Shared.Interaction;
+using Content.Shared.Popups;
 using Content.Shared.Verbs;
-using Content.Shared.Sprite;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Timing;
 
-namespace Content.Shared.Paint;
+namespace Content.Shared._Floof.Paint;
 
 public sealed class PaintRemoverSystem : SharedPaintSystem
 {
@@ -36,8 +34,7 @@ public sealed class PaintRemoverSystem : SharedPaintSystem
 
         _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, component.CleanDelay, new PaintRemoverDoAfterEvent(), uid, args.Target, uid)
         {
-            BreakOnUserMove = true,
-            BreakOnTargetMove = true,
+            BreakOnMove = true,
             BreakOnDamage = true,
             MovementThreshold = 1.0f,
         });
@@ -56,9 +53,8 @@ public sealed class PaintRemoverSystem : SharedPaintSystem
         paint.Enabled = false;
         _audio.PlayPredicted(component.Sound, target, args.User);
         _popup.PopupClient(Loc.GetString("paint-removed", ("target", target)), args.User, args.User, PopupType.Medium);
-        _appearanceSystem.SetData(target, PaintVisuals.Painted, false);
+        _appearanceSystem.RemoveData(target, PaintVisuals.Painted);
         RemComp<PaintedComponent>(target);
-        Dirty(target, paint);
 
         args.Handled = true;
     }
@@ -83,8 +79,7 @@ public sealed class PaintRemoverSystem : SharedPaintSystem
                         args.Target,
                         uid)
                     {
-                        BreakOnUserMove = true,
-                        BreakOnTargetMove = true,
+                        BreakOnMove = true,
                         BreakOnDamage = true,
                         MovementThreshold = 1.0f,
                     });

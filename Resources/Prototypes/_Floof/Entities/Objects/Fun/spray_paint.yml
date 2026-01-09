@@ -8,7 +8,7 @@
   components:
   - type: Appearance
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     state: clown_cap
     layers:
       - state: clown_cap
@@ -19,7 +19,7 @@
       tags:
         - NoPaint
   - type: Item
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     heldPrefix: spray
   - type: SolutionContainerManager
     solutions:
@@ -50,7 +50,7 @@
   - type: Paint
     color: "#fa74df"
   - type: Item
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     heldPrefix: clown
   - type: GenericVisualizer
     visuals:
@@ -68,10 +68,10 @@
   - type: Paint
     color: "#d5e028"
   - type: Item
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     heldPrefix: clown
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     state: clown2_cap
     layers:
       - state: clown2_cap
@@ -91,10 +91,10 @@
   - type: Paint
     color: "#ff20c8"
   - type: Item
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     heldPrefix: spray
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     state: death_cap
     layers:
       - state: death_cap
@@ -113,10 +113,10 @@
   - type: Paint
     color: "#ff2020"
   - type: Item
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     heldPrefix: spray
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     state: death2_cap
     layers:
       - state: death2_cap
@@ -137,7 +137,7 @@
   suffix: Blue
   components:
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     layers:
       - state: spray
         map: ["Base"]
@@ -160,7 +160,7 @@
   suffix: Red
   components:
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     layers:
       - state: spray
         map: ["Base"]
@@ -183,7 +183,7 @@
   suffix: Green
   components:
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     layers:
       - state: spray
         map: ["Base"]
@@ -206,7 +206,7 @@
   suffix: Black
   components:
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     layers:
       - state: spray
         map: ["Base"]
@@ -229,7 +229,7 @@
   suffix: Orange
   components:
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     layers:
       - state: spray
         map: ["Base"]
@@ -252,7 +252,7 @@
   suffix: Purple
   components:
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     layers:
       - state: spray
         map: ["Base"]
@@ -275,7 +275,7 @@
   suffix: White
   components:
   - type: Sprite
-    sprite: Objects/Fun/spraycans.rsi
+    sprite: _Floof/Objects/Fun/spraycans.rsi
     layers:
       - state: spray
         map: ["Base"]
@@ -336,11 +336,10 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: Objects/Fun/spraycans.rsi
+    - sprite: _Floof/Objects/Fun/spraycans.rsi
       state: death2
   - type: EntityTableSpawner
     table: !type:NestedSelector
       tableId: SprayPaintTable
       prob: 0.6
-# Floof section end
 # ======================================== #
