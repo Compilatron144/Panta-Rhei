@@ -175,8 +175,7 @@ public sealed class ColorPaintSystem : EntitySystem
         }
 
         if (_whitelist.IsWhitelistFail(paint.Comp.Whitelist, target)
-            || _whitelist.IsBlacklistPass(paint.Comp.Blacklist, target)
-            || HasComp<HumanoidAppearanceComponent>(target) || HasComp<SubFloorHideComponent>(target))
+            || _whitelist.IsBlacklistPass(paint.Comp.Blacklist, target))
         {
             reason = Loc.GetString("paint-failure", ("target", target));
             return false;
