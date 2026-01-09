@@ -1,18 +1,4 @@
 - type: entity
-  parent: CratePlastic
-  id: CrateSprayPaint
-  name: spray paint crate
-  description: A box containing some assorted spray paint.
-  suffix: Filled
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        rolls: !type:RangeNumberSelector
-          range: 6, 12
-        tableId: SprayPaintTable
-
-- type: entity
   name: spray paint spawner
   suffix: 1, 60%
   id: SprayPaintSpawner
