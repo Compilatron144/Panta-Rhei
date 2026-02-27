@@ -698,3 +698,27 @@ Entries:
       message: Fixed resomi head marking
   id: 88
   time: '2026-02-26T15:26:30.0000000+00:00'
+- author: Dunrab
+  changes:
+    - type: Add
+      message: Added flashlights to trinkets.
+    - type: Add
+      message: Added an additional cloak to mystagogues loadout.
+    - type: Add
+      message: >-
+        Added salvage utility belts, and two filled chest rigs for salvage in
+        their loadouts.
+    - type: Add
+      message: Added moth cloaks to neck loadout for all jobs.
+    - type: Fix
+      message: Fixed passengers not having trinkets.
+    - type: Fix
+      message: >-
+        Fixed Inventory Specialist and Chief Engineer not having their
+        jumpsuits.
+    - type: Fix
+      message: >-
+        Medical Doctors & Engineers will start with their standard belts instead
+        of no belt.
+  id: 89
+  time: '2026-02-27T07:37:44.0000000+00:00'
