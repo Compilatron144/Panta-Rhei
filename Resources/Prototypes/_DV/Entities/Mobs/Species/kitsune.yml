@@ -65,7 +65,7 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
-    - KistuneEmotes # Added
+    - KitsuneEmotes # Added
 
 - type: entity
   save: false
