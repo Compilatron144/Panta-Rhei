@@ -107,8 +107,8 @@
       required: false
     Arms:
       points: 10
-      required: false
-      defaultMarkings: [ HarpyWingDefaultHuescale ]
+      required: true
+      # defaultMarkings: [ HarpyWingDefaultHuescale ] # breaks the layering if kept. Is ugly but the way this stuff is implemented makes it impossible to do anything else
 
 - type: humanoidBaseSprite
   id: MobHarpyHead
