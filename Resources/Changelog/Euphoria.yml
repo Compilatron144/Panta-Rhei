@@ -924,3 +924,13 @@ Entries:
       message: Added ADT Shadowkin prototypes
   id: 114
   time: '2026-03-03T08:21:43.0000000+00:00'
+- author: Dunrab
+  changes:
+    - type: Fix
+      message: >-
+        Engineers over at Centcomm found the missing telecom server that was
+        meant to be used by Logi on Glacier.
+    - type: Fix
+      message: Pebble now has its mining PC.
+  id: 115
+  time: '2026-03-03T08:24:06.0000000+00:00'
