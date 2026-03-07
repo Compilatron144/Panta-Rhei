@@ -1117,3 +1117,9 @@ Entries:
         Centcomm, you will be pacified upon docking.
   id: 138
   time: '2026-03-07T04:13:35.0000000+00:00'
+- author: Ryunexo
+  changes:
+    - type: Add
+      message: Added two new drinks referencing two well-known characters.
+  id: 139
+  time: '2026-03-07T06:25:09.0000000+00:00'
