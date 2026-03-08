@@ -90,7 +90,8 @@
         - BorgModuleSecurity
     hasMindState: quadcap_e
     noMindState: quadcap_e_r
-    radioChannels:
+  - type: IntrinsicRadioTransmitter
+    channels:
     - Common
     - Command
     - Engineering
@@ -102,6 +103,21 @@
     - Supply
     - Prison
     - Traffic
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Justice
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Prison
+    - Traffic
+    - Binary
   - type: BorgTransponder
     sprite:
       sprite: _Floof/Mobs/Silicon/chassis.rsi
@@ -132,8 +148,8 @@
   parent: QuadChassisCommand
   name: central command quad cyborg
   components:
-  - type: BorgChassis
-    radioChannels:
+  - type: IntrinsicRadioTransmitter
+    channels:
     - Common
     - Command
     - Engineering
@@ -146,6 +162,22 @@
     - Prison
     - Traffic
     - CentCom
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Justice
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Prison
+    - Traffic
+    - CentCom
+    - Binary
   - type: Sprite
     layers:
     - state: quadcc
