@@ -126,16 +126,6 @@
 #  - type: InteractionPopup # Floofstation - interaction verb system replaces popups
 #    interactSuccessString: petting-success-generic-cyborg
 #    interactFailureString: petting-failure-generic-cyborg
-  - type: LanguageKnowledge # Floofstation - languages
-    speaks:
-    - TauCetiBasic
-    - Binary
-    understands:
-    - TauCetiBasic
-    - Binary
-    naturalLanguage: Binary
-  - type: LeashAnchor
-    kind: Intrinsic
   - type: Fiber
     fiberMaterial: fibers-plasteel
     fiberColor: fibers-blue
