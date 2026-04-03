@@ -21,7 +21,7 @@
   # Visual
   clientComponents:
   - type: Sprite
-    scale: 0.7, 0.7
+    scale: 0.75, 0.75
     noRot: true
     drawdepth: Mobs
     sprite: _Floof/Mobs/Silicon/chassis.rsi
@@ -76,7 +76,7 @@
   # Visual
   clientComponents:
   - type: Sprite
-    scale: 0.7, 0.7
+    scale: 0.75, 0.75
     noRot: true
     drawdepth: Mobs
     sprite: _Floof/Mobs/Silicon/chassis.rsi
@@ -144,7 +144,7 @@
   # Visual
   clientComponents:
   - type: Sprite
-    scale: 0.7, 0.7
+    scale: 0.75, 0.75
     noRot: true
     drawdepth: Mobs
     sprite: _Floof/Mobs/Silicon/chassis.rsi
@@ -161,7 +161,7 @@
       visible: false
   inventoryTemplateId: borgShort
   spriteBodyState: quadsec
-  spriteHasMindState: quadsec_e_r
+  spriteHasMindState: quadsec_e
   spriteNoMindState: quadsec_e_r
   spriteToggleLightState: quadsec_l
   # Pet
@@ -201,7 +201,7 @@
   # Visual
   clientComponents:
   - type: Sprite
-    scale: 0.7, 0.7
+    scale: 0.75, 0.75
     noRot: true
     drawdepth: Mobs
     sprite: _Floof/Mobs/Silicon/chassis.rsi
@@ -273,7 +273,7 @@
   # Visual
   clientComponents:
   - type: Sprite
-    scale: 0.7, 0.7
+    scale: 0.75, 0.75
     noRot: true
     drawdepth: Mobs
     sprite: _Floof/Mobs/Silicon/chassis.rsi
@@ -328,7 +328,7 @@
   # Visual
   clientComponents:
   - type: Sprite
-    scale: 0.7, 0.7
+    scale: 0.75, 0.75
     noRot: true
     drawdepth: Mobs
     sprite: _Floof/Mobs/Silicon/chassis.rsi
@@ -382,7 +382,7 @@
   # Visual
   clientComponents:
   - type: Sprite
-    scale: 0.7, 0.7
+    scale: 0.75, 0.75
     noRot: true
     drawdepth: Mobs
     sprite: _Floof/Mobs/Silicon/chassis.rsi
