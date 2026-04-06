@@ -1,12 +1,12 @@
-﻿using Content.Shared._EE.FootPrint;
+﻿using Content.Shared._Floof.Footprint;
 using Content.Shared._Floof.Util;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Random;
 
-namespace Content.Client._EE.FootPrint;
+namespace Content.Client._Floof.FootPrint;
 
-public sealed class FootPrintsVisualizerSystem : VisualizerSystem<Shared._Floof.Footprint.FootPrintComponent>
+public sealed class FootPrintsVisualizerSystem : VisualizerSystem<FootPrintComponent>
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -15,11 +15,11 @@ public sealed class FootPrintsVisualizerSystem : VisualizerSystem<Shared._Floof.
     {
         base.Initialize();
 
-        SubscribeLocalEvent<Shared._Floof.Footprint.FootPrintComponent, ComponentInit>(OnInitialized);
-        SubscribeLocalEvent<Shared._Floof.Footprint.FootPrintComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<FootPrintComponent, ComponentInit>(OnInitialized);
+        SubscribeLocalEvent<FootPrintComponent, ComponentShutdown>(OnShutdown);
     }
 
-    private void OnInitialized(EntityUid uid, Shared._Floof.Footprint.FootPrintComponent comp, ComponentInit args)
+    private void OnInitialized(EntityUid uid, FootPrintComponent comp, ComponentInit args)
     {
         if (!TryComp<SpriteComponent>(uid, out var sprite))
             return;
@@ -28,17 +28,17 @@ public sealed class FootPrintsVisualizerSystem : VisualizerSystem<Shared._Floof.
         UpdateAppearance(uid, comp, sprite);
     }
 
-    private void OnShutdown(EntityUid uid, Shared._Floof.Footprint.FootPrintComponent comp, ComponentShutdown args)
+    private void OnShutdown(EntityUid uid, FootPrintComponent comp, ComponentShutdown args)
     {
         if (TryComp<SpriteComponent>(uid, out var sprite)
             && sprite.LayerMapTryGet(FootPrintVisualLayers.Print, out var layer))
             sprite.RemoveLayer(layer);
     }
 
-    private void UpdateAppearance(EntityUid uid, Shared._Floof.Footprint.FootPrintComponent component, SpriteComponent sprite)
+    private void UpdateAppearance(EntityUid uid, FootPrintComponent component, SpriteComponent sprite)
     {
         if (!sprite.LayerMapTryGet(FootPrintVisualLayers.Print, out var layer)
-            || !TryComp<Shared._Floof.Footprint.FootPrintsComponent>(component.PrintOwner, out var printsComponent)
+            || !TryComp<FootPrintsComponent>(component.PrintOwner, out var printsComponent)
             || !TryComp<AppearanceComponent>(uid, out var appearance)
             || !_appearance.TryGetData<FootPrintVisuals>(uid, FootPrintVisualState.State, out var printVisuals, appearance))
             return;
@@ -56,7 +56,7 @@ public sealed class FootPrintsVisualizerSystem : VisualizerSystem<Shared._Floof.
             sprite.LayerSetColor(layer, printColor);
     }
 
-    protected override void OnAppearanceChange (EntityUid uid, Shared._Floof.Footprint.FootPrintComponent component, ref AppearanceChangeEvent args)
+    protected override void OnAppearanceChange (EntityUid uid, FootPrintComponent component, ref AppearanceChangeEvent args)
     {
         if (args.Sprite is not { } sprite)
             return;

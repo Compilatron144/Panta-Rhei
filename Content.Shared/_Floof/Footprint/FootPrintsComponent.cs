@@ -1,10 +1,11 @@
 ﻿using System.Numerics;
+using Content.Shared._EE.FootPrint;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._EE.FootPrint;
+namespace Content.Shared._Floof.Footprint;
 
 [RegisterComponent]
 public sealed partial class FootPrintsComponent : Component
@@ -34,14 +35,9 @@ public sealed partial class FootPrintsComponent : Component
         "dragging-4",
         "dragging-5",
     ];
-    // yea, those
 
     [ViewVariables(VVAccess.ReadOnly), DataField]
     public EntProtoId<FootPrintComponent> StepProtoId = "Footstep";
-
-    // Floofstation - removed
-    // [ViewVariables(VVAccess.ReadOnly), DataField]
-    // public Color PrintsColor = Color.FromHex("#00000000");
 
     /// <summary>
     ///     The size scaling factor for footprint steps. Must be positive.
@@ -55,22 +51,6 @@ public sealed partial class FootPrintsComponent : Component
     [DataField]
     public float DragSize = 0.5f;
 
-    // Floofstation - removed
-    // /// <summary>
-    // ///     The amount of color to transfer from the source (e.g., puddle) to the footprint.
-    // /// </summary>
-    // [DataField]
-    // public float ColorQuantity;
-    //
-    // /// <summary>
-    // ///     The factor by which the alpha channel is reduced in subsequent footprints.
-    // /// </summary>
-    // [DataField]
-    // public float ColorReduceAlpha = 0.1f;
-    //
-    // [DataField]
-    // public string? ReagentToTransfer;
-
     [DataField]
     public Vector2 OffsetPrint = new(0.1f, 0f);
 
@@ -83,13 +63,6 @@ public sealed partial class FootPrintsComponent : Component
     ///     The position of the last footprint in world coordinates.
     /// </summary>
     public Vector2 StepPos = Vector2.Zero;
-
-    // Floofstation - removed
-    // /// <summary>
-    // ///     Controls how quickly the footprint color transitions between steps.
-    // ///     Value between 0 and 1, where higher values mean faster color changes.
-    // /// </summary>
-    // public float ColorInterpolationFactor = 0.2f;
 
     // Floofstation edits section
     /// <summary>

@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization;
 
-namespace Content.Shared._EE.FootPrint;
+namespace Content.Shared._Floof.Footprint;
 
 [Serializable, NetSerializable]
 public enum FootPrintVisuals : byte

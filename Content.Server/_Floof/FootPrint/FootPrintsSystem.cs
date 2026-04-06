@@ -1,21 +1,21 @@
 ﻿using System.Linq;
 using Content.Server.Atmos.Components;
-using Content.Shared._EE.Flight; // DeltaV
+using Content.Shared._EE.Flight;
 using Content.Shared._EE.FootPrint;
-using Content.Shared.Inventory;
-using Content.Shared.Mobs;
-using Content.Shared.Mobs.Components;
-// using Content.Shared.Standing;
+using Content.Shared._Floof.Footprint;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Humanoid;
+using Content.Shared.Inventory;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Standing;
 using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+// DeltaV
 
-namespace Content.Server._EE.FootPrint;
+namespace Content.Server._Floof.FootPrint;
 
 public sealed class FootPrintsSystem : EntitySystem
 {
