@@ -103,6 +103,7 @@
   - ClothingUniformJumpsuitCatsuit
   - ClothingUniformJumpsuitCatsuitShiny
   - ClothingCostumeBunnySuit
+  - ClothingCowprintBikini
   - UniformNudityPermit
 
 # gloves
@@ -155,6 +156,7 @@
   - ClothingSocksPan
   - ClothingSocksTrans
   - ClothingSocksCoderValid
+  - ClothingSocksCowprint
 
 # backpacks
 - type: loadoutGroup
