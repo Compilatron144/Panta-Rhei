@@ -165,7 +165,7 @@
     # Floofstation section end
     # Begin Euphoria Additions
     ClothingUniformCowprintBikini: 4
-    ClothingCowsocks: 4
+    ClothingUnderCowprintsocks: 4
     # End Euphoria Additions
 
   contrabandInventory:
