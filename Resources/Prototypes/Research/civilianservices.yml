@@ -14,7 +14,7 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
-  - MilkerMachineCircuitboard # Euphoria
+  - MilkingMachineCircuitboard # Euphoria
 
 - type: technology
   id: CritterMechs
