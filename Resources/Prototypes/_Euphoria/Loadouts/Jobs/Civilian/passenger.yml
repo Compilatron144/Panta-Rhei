@@ -9,3 +9,9 @@
   equipment:
     shoes: ClothingUnderCowprintsocks
   groupBy: "thigh highs"
+
+# outer clothing
+- type: loadout
+  id: OuterLustroCoat
+  equipment:
+    outerClothing: ClothingOuterLustroEcclesiaWinterCoat

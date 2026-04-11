@@ -642,6 +642,10 @@
     - CollarsFloofstation
     - CarpetSimple
     # Floofstation section end
+    # Euphoria section
+    - ClothingEpistemicsEuphoria
+    - ClothingPassengerEuphoria
+    # Euphoria section end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
