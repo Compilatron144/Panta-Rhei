@@ -76,7 +76,7 @@
       - Belt
   - type: PhysicalComposition # DeltaV - Made flashlights recycleable
     materialComposition:
-      Steel: 100
+      Steel: 50 # Floofstation - infinite steel glitch
       Plastic: 100
 
 - type: entity
