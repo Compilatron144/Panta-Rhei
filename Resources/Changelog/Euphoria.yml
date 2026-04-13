@@ -2055,3 +2055,9 @@ Entries:
         other players unless they turn on a new consent toggle.
   id: 257
   time: '2026-04-13T05:20:25.0000000+00:00'
+- author: ScarlettJFG
+  changes:
+    - type: Add
+      message: Added Weldbots, now requiring Experimental Welders.
+  id: 258
+  time: '2026-04-13T08:41:49.0000000+00:00'
