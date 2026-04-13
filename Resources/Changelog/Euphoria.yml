@@ -2004,3 +2004,17 @@ Entries:
       message: Probably fixed the empty footprint bug.
   id: 251
   time: '2026-04-13T00:12:00.0000000+00:00'
+- author: StrawOfMan
+  changes:
+    - type: Add
+      message: >-
+        Added quad variants of the Generic, Janitorial, and Engineering cyborgs.
+        Also added Command and CC quads as admeme spawns.
+    - type: Tweak
+      message: >-
+        Changed the sprites for the existing Security, Service, Medical, and
+        Salvage quads.
+    - type: Fix
+      message: Fixed a typo within the quad FTL.
+  id: 252
+  time: '2026-04-13T04:25:16.0000000+00:00'
