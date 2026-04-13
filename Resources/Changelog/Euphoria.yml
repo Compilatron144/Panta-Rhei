@@ -2018,3 +2018,9 @@ Entries:
       message: Fixed a typo within the quad FTL.
   id: 252
   time: '2026-04-13T04:25:16.0000000+00:00'
+- author: bandw2gs
+  changes:
+    - type: Add
+      message: PTech inventory expanded for HoP
+  id: 253
+  time: '2026-04-13T04:51:29.0000000+00:00'
