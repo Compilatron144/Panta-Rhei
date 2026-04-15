@@ -2143,3 +2143,9 @@ Entries:
       message: IPC emotes, piloting, footsteps, and opening doors
   id: 267
   time: '2026-04-15T22:09:09.0000000+00:00'
+- author: Dunrab
+  changes:
+    - type: Tweak
+      message: The document printer will have its material magnet off by default.
+  id: 268
+  time: '2026-04-15T22:10:35.0000000+00:00'
