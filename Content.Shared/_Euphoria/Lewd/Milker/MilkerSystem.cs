@@ -16,6 +16,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Shared.Audio;
 using Content.Shared.Random.Helpers;
+using Robust.Shared.Containers;
+using Content.Shared._Floof.Leash.Components;
+using Robust.Shared.Network;
 using System.Linq;
 
 namespace Content.Shared._Floof.Lewd.Milker;
@@ -35,6 +38,8 @@ public sealed class MilkerSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambient = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly INetManager _net = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -49,7 +54,6 @@ public sealed class MilkerSystem : EntitySystem
     private void OnComponentInit(Entity<MilkerComponent> entity, ref ComponentStartup args)
     {
         base.Initialize();
-
     }
 
     private void OnDestroyed(Entity<MilkerComponent> entity, ref DestructionEventArgs args)
@@ -125,6 +129,18 @@ public sealed class MilkerSystem : EntitySystem
         _ambient.SetAmbience(entity, true);
         entity.Comp.MilkedSolution = _solution.EnumerateSolutions(target).First((solution) => entity.Comp.MilkedSolutionWhitelist.Contains(solution.Name)).Name;
         entity.Comp.MilkedEntity = target;
+
+        if (entity.Comp.TubeSprite is { } sprite)
+        {
+            _container.EnsureContainer<ContainerSlot>(entity, MilkerComponent.VisualsContainerName);
+            if (EntityManager.TrySpawnInContainer(null, entity, MilkerComponent.VisualsContainerName, out var visualEntity))
+            {
+                var visualComp = EnsureComp<LeashedVisualsComponent>(visualEntity.Value);
+                visualComp.Sprite = sprite;
+                visualComp.Source = entity;
+                visualComp.Target = target;
+            }
+        }
         Dirty(entity);
     }
 
@@ -139,6 +155,8 @@ public sealed class MilkerSystem : EntitySystem
             _ambient.SetAmbience(entity, false);
             entity.Comp.MilkedSolution = null;
             entity.Comp.MilkedEntity = null;
+            if (_container.TryGetContainer(entity, MilkerComponent.VisualsContainerName, out var visualsContainer))
+                _container.CleanContainer(visualsContainer);
             Dirty(entity);
         }
     }
@@ -190,26 +208,24 @@ public sealed class MilkerSystem : EntitySystem
         }
     }
 
+    // Checks if the entity is whitelist valid - can we milk this twink?
     public bool CheckMilkable(Entity<MilkerComponent> milker, EntityUid target)
     {
-        MilkerComponent comp = milker.Comp;
-
-        return _whitelist.IsWhitelistPass(comp.MilkedEntityWhitelist, target) &&
-        _solution.EnumerateSolutions(target).Any((solution) => comp.MilkedSolutionWhitelist.Contains(solution.Name));
+        if (!_whitelist.IsWhitelistPass(milker.Comp.MilkedEntityWhitelist, target))
+            return false;
+        if (!_solution.EnumerateSolutions(target).Any((solution) => milker.Comp.MilkedSolutionWhitelist.Contains(solution.Name)))
+            return false;
+        return true;
     }
 
+    // Checks if the entity can actually be reached by the milker and milkee
     public bool CheckInteraction(Entity<MilkerComponent> milker, EntityUid target, EntityUid user)
     {
         if (!_actionBlocker.CanComplexInteract(user))
-        {
             return false;
-        }
 
         if (!_interaction.InRangeUnobstructed(user, target))
-        {
             return false;
-        }
-
         return true;
     }
 

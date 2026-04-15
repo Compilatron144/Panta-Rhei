@@ -38,6 +38,5 @@ public sealed partial class MilkerComponent : Component
     public double TubeLength = 5; // Maximum length of the tube
     [DataField]
     public Vector2 TubeOffsetSource, TubeOffsetTarget = Vector2.Zero;
-    [DataField]
-    public bool DoJitter = true;
+    public const string VisualsContainerName = "tube-visuals";
 }
