@@ -2113,3 +2113,21 @@ Entries:
         deleted upon ghosting.
   id: 264
   time: '2026-04-15T03:27:59.0000000+00:00'
+- author: OrenjiKnight
+  changes:
+    - type: Add
+      message: 'Vector '
+    - type: Add
+      message: Modded Vector (Syndicate)
+    - type: Add
+      message: Unique Ammo for Modded Vector
+    - type: Add
+      message: Kriss Vector (Admeme)
+    - type: Tweak
+      message: Vectors can be wielded
+    - type: Tweak
+      message: Changed how the weapons work functionally.
+    - type: Tweak
+      message: Logi store & syndicate uplink have respective weaponry
+  id: 265
+  time: '2026-04-15T10:38:12.0000000+00:00'
