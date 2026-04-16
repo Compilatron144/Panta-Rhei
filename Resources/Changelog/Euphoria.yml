@@ -2149,3 +2149,11 @@ Entries:
       message: The document printer will have its material magnet off by default.
   id: 268
   time: '2026-04-15T22:10:35.0000000+00:00'
+- author: bandw2gs
+  changes:
+    - type: Fix
+      message: Shadekin process ethanol correctly
+    - type: Fix
+      message: Shadekin now spawn with survival kits
+  id: 269
+  time: '2026-04-16T00:20:50.0000000+00:00'
