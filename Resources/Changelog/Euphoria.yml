@@ -2168,3 +2168,11 @@ Entries:
       message: Added the emotional support collars to the hops ptech.
   id: 270
   time: '2026-04-16T05:47:12.0000000+00:00'
+- author: UtriculariaCalycifida
+  changes:
+    - type: Tweak
+      message: Numb now gives 2 points rather than costing one.
+    - type: Tweak
+      message: Only the user can see chronic pain popups.
+  id: 271
+  time: '2026-04-16T07:04:57.0000000+00:00'
