@@ -172,6 +172,11 @@ public sealed class MilkerSystem : EntitySystem
             if (component.MilkedEntity == null)
                 continue;
 
+            // Check if it's time for our next tick
+            if (_timing.CurTime < component.NextUpdate)
+                continue;
+            component.NextUpdate = _timing.CurTime + component.UpdateDelay;
+
             // If the milked entity is too far away, detach them
             if (Vector2.DistanceSquared(
                 _xform.GetWorldPosition(uid),
@@ -185,11 +190,6 @@ public sealed class MilkerSystem : EntitySystem
             // Check if we have power (also should check if the power switch is on)
             if (!_powerReceiver.IsPowered(uid))
                 continue;
-
-            // Check if it's time for our next tick
-            if (_timing.CurTime < component.NextUpdate)
-                continue;
-            component.NextUpdate = _timing.CurTime + component.UpdateDelay;
 
             // Do the milking
             _solution.TryGetSolution(uid, component.Solution, out Entity<SolutionComponent>? solution);

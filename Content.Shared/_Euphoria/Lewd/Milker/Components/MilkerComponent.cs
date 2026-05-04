@@ -19,15 +19,15 @@ public sealed partial class MilkerComponent : Component
     [DataField]
     public string? MilkedSolution; // Solution of entity being milked
     [DataField]
-    public string[] MilkedSolutionWhitelist = ["breasts", "udder"];
+    public string[] MilkedSolutionWhitelist = ["mammaryGlands", "udder"]; // Valid solutions for milking
     [DataField]
     public FixedPoint2 MilkedAmount = 10; // Amount to be milked
     [DataField]
-    public string PopupDataset;
+    public string PopupDataset; // Dataset for "encouraging prompts"
     [DataField]
-    public double PopupChance = 0.25;
+    public double PopupChance = 0.05; // Chance for a popup per update
     [DataField]
-    public TimeSpan UpdateDelay = TimeSpan.FromSeconds(5);
+    public TimeSpan UpdateDelay = TimeSpan.FromSeconds(1);
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     public TimeSpan NextUpdate = TimeSpan.FromSeconds(0);
     [DataField]
