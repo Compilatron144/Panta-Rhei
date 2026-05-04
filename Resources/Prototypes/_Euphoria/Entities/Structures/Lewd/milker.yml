@@ -40,9 +40,9 @@
         sprite: _Euphoria/Objects/Structures/Lewd/milker_tube.rsi
         state: tube
       popupDataset: MilkerPopups
-      milkedAmount: 10
+      milkedAmount: 2
       milkedSolutionWhitelist:
-      - breasts
+      - mammaryGlands
       - udder
       milkedEntityWhitelist:
         components:

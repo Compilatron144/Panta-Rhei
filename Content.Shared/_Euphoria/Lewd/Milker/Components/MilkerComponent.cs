@@ -21,7 +21,7 @@ public sealed partial class MilkerComponent : Component
     [DataField]
     public string[] MilkedSolutionWhitelist = ["mammaryGlands", "udder"]; // Valid solutions for milking
     [DataField]
-    public FixedPoint2 MilkedAmount = 10; // Amount to be milked
+    public FixedPoint2 MilkedAmount = 2; // Amount to be milked
     [DataField]
     public string PopupDataset; // Dataset for "encouraging prompts"
     [DataField]
