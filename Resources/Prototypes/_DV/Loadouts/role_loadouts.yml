@@ -79,6 +79,7 @@
   - ChiefJusticeNeck
   - ChiefJusticeOuterClothing
   - FloofCJPDAs # Floofstation
+  - JusticePaperworkBelt # Floofstation
   - PassengerGloves
   - CommonBackpack
   - ChiefJusticeShoes
@@ -94,6 +95,8 @@
   - ClerkJumpsuit
   - ClerkNeck
   - ClerkOuterClothing
+  - JusticePaperworkBelt # Floofstation
+  - PassengerGloves # Floofstation
   - CommonBackpack
   - ClerkShoes
   - Glasses
@@ -108,6 +111,9 @@
   - ProsecutorJumpsuit
   - ProsecutorNeck
   - ProsecutorOuterClothing
+  - PassengerShoes # Floofstation
+  - JusticePaperworkBelt # Floofstation
+  - PassengerGloves # Floofstation
   - CommonBackpack
   - Glasses
   - Survival
