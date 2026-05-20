@@ -122,6 +122,9 @@ public sealed class MilkerSystem : EntitySystem
 
     public void Attach(Entity<MilkerComponent> entity, EntityUid target)
     {
+        if (_net.IsClient)
+            return;
+
         _popupSystem.PopupPredicted(Loc.GetString("milker-attach-finish-popup",
             ("target", Identity.Entity(target, EntityManager)),
             ("entity", Identity.Entity(entity, EntityManager))
@@ -146,6 +149,9 @@ public sealed class MilkerSystem : EntitySystem
 
     public void Detach(Entity<MilkerComponent> entity)
     {
+        if (_net.IsClient)
+            return;
+
         if (entity.Comp.MilkedEntity != null)
         {
             _popupSystem.PopupPredicted(Loc.GetString("milker-detach-popup",
