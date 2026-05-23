@@ -154,10 +154,13 @@ public sealed class MilkerSystem : EntitySystem
 
         if (entity.Comp.MilkedEntity != null)
         {
-            _popupSystem.PopupPredicted(Loc.GetString("milker-detach-popup",
-                ("target", Identity.Entity((EntityUid)entity.Comp.MilkedEntity, EntityManager)),
-                ("entity", Identity.Entity(entity, EntityManager))
-            ), entity.Owner, entity.Comp.MilkedEntity);
+            if (Exists(entity.Comp.MilkedEntity))
+            {
+                _popupSystem.PopupPredicted(Loc.GetString("milker-detach-popup",
+                    ("target", Identity.Entity((EntityUid)entity.Comp.MilkedEntity, EntityManager)),
+                    ("entity", Identity.Entity(entity, EntityManager))
+                ), entity.Owner, entity.Comp.MilkedEntity);
+            }
             _ambient.SetAmbience(entity, false);
             entity.Comp.MilkedSolution = null;
             entity.Comp.MilkedEntity = null;
@@ -182,6 +185,13 @@ public sealed class MilkerSystem : EntitySystem
             if (_timing.CurTime < component.NextUpdate)
                 continue;
             component.NextUpdate = _timing.CurTime + component.UpdateDelay;
+
+            // If the milked entity no longer exists, detach
+            if (!Exists(component.MilkedEntity))
+            {
+                Detach(new Entity<MilkerComponent>(uid, component));
+                continue;
+            }
 
             // If the milked entity is too far away, detach them
             if (Vector2.DistanceSquared(
