@@ -51,6 +51,13 @@
   groupBy: "cardbox"
 
 - type: loadout
+  id: CardBoxTarot
+  storage:
+    back:
+    - CardBoxTarot
+  groupBy: "cardbox"
+
+- type: loadout
   id: TennisBall
   storage:
     back:
@@ -83,6 +90,13 @@
   storage:
     back:
     - PlushieSharkBlue
+  groupBy: "Plushies"
+
+- type: loadout
+  id: CarpChewToy
+  storage:
+    back:
+    - CarpChewToy
   groupBy: "Plushies"
 
 - type: loadout
