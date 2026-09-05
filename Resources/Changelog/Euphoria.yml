@@ -5592,3 +5592,9 @@ Entries:
       message: You should now be able to craft the clown car.
   id: 697
   time: '2026-09-05T01:01:36.0000000+00:00'
+- author: Dunrab
+  changes:
+    - type: Add
+      message: Added two clumsy traits.
+  id: 698
+  time: '2026-09-05T01:03:00.0000000+00:00'
