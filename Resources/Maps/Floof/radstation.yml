@@ -133739,38 +133739,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 26.5,-66.5
       parent: 2
-- proto: SMESAdvanced
-  entities:
-  - uid: 491
-    components:
-    - type: Transform
-      pos: -20.5,-58.5
-      parent: 2
-  - uid: 492
-    components:
-    - type: Transform
-      pos: -20.5,-57.5
-      parent: 2
-  - uid: 19364
-    components:
-    - type: Transform
-      pos: -17.5,-55.5
-      parent: 2
-  - uid: 19498
-    components:
-    - type: Transform
-      pos: -20.5,-56.5
-      parent: 2
-  - uid: 19502
-    components:
-    - type: Transform
-      pos: -19.5,-55.5
-      parent: 2
-  - uid: 19642
-    components:
-    - type: Transform
-      pos: -18.5,-55.5
-      parent: 2
 - proto: SMESBasic
   entities:
   - uid: 18695
@@ -133807,6 +133775,37 @@ entities:
       name: Telecom SMES
     - type: Transform
       pos: 8.5,34.5
+      parent: 2
+    entities:
+  - uid: 491
+    components:
+    - type: Transform
+      pos: -20.5,-58.5
+      parent: 2
+  - uid: 492
+    components:
+    - type: Transform
+      pos: -20.5,-57.5
+      parent: 2
+  - uid: 19364
+    components:
+    - type: Transform
+      pos: -17.5,-55.5
+      parent: 2
+  - uid: 19498
+    components:
+    - type: Transform
+      pos: -20.5,-56.5
+      parent: 2
+  - uid: 19502
+    components:
+    - type: Transform
+      pos: -19.5,-55.5
+      parent: 2
+  - uid: 19642
+    components:
+    - type: Transform
+      pos: -18.5,-55.5
       parent: 2
 - proto: SMESBasicEmpty
   entities:
