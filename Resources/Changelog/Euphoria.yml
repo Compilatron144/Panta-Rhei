@@ -5608,3 +5608,13 @@ Entries:
       message: The suggestive gesture should now appear in the interact verb menu.
   id: 699
   time: '2026-09-05T01:28:58.0000000+00:00'
+- author: SyaoranFox
+  changes:
+    - type: Fix
+      message: >-
+        Crash as a result of vent crawlers trying to exit into a freezer/heater
+        attached to pipes.
+    - type: Fix
+      message: Client spam from nodecrawling
+  id: 700
+  time: '2026-09-05T03:03:19.0000000+00:00'
