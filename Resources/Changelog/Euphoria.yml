@@ -5586,3 +5586,9 @@ Entries:
         welded vent.
   id: 696
   time: '2026-09-04T10:52:11.0000000+00:00'
+- author: Dunrab
+  changes:
+    - type: Fix
+      message: You should now be able to craft the clown car.
+  id: 697
+  time: '2026-09-05T01:01:36.0000000+00:00'
